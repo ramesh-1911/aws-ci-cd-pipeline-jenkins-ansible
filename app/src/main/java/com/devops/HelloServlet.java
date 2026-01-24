@@ -14,6 +14,6 @@ public class HelloServlet extends HttpServlet {
             throws ServletException, IOException {
 
         response.setContentType("text/html");
-        response.getWriter().println("<h1>AWS DevOps CI/CD Pipeline Working Successfully</h1>");
+        response.getWriter().println("<h1>AWS DevOps CI/CD Pipeline Auto Trigger Working Successfully</h1>");
     }
 }
