@@ -1,0 +1,23 @@
+- name: Deploy Java Application to Tomcat Server
+  hosts: tomcat
+  become: yes
+
+  tasks:
+
+    - name: Stop Tomcat Server
+      shell: /opt/tomcat/bin/shutdown.sh
+      ignore_errors: yes
+
+    - name: Remove Old Application
+      file:
+        path: /opt/tomcat/webapps/devops-app.war
+        state: absent
+
+    - name: Copy New WAR File
+      copy:
+        src: ../app/target/devops-app.war
+        dest: /opt/tomcat/webapps/devops-app.war
+        mode: '0644'
+
+    - name: Start Tomcat Server
+      shell: /opt/tomcat/bin/startup.sh
