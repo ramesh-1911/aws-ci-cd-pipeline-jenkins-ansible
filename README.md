@@ -9,7 +9,7 @@ This project demonstrates an end-to-end CI/CD pipeline for Java applications usi
 - GitHub
 - Maven
 - Ansible
-- Docker (if used)
+- Docker
 - Prometheus & Grafana
 
 ## CI/CD Architecture Overview
@@ -80,6 +80,10 @@ This project demonstrates an end-to-end CI/CD pipeline for Java applications usi
                │        Grafana           │
                │   (Visualization UI)    │
                └────────────────────────┘
+
+## Workflow Diagram
+
+![alt text](<Workflow Diagram.png>)
 
 ## ⚙ Features
 - Automated build and deployment
